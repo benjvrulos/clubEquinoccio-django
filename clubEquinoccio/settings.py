@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     ## MY APPS
     'home.apps.HomeConfig',
+    'salida.apps.SalidaConfig',
+    'persona.apps.PersonaConfig',
 ]
 
 MIDDLEWARE = [
