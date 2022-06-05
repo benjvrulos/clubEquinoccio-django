@@ -1,4 +1,5 @@
 from django.db import models
+from persona.models import Persona
 
 # Create your models here.
 class Salida(models.Model):
@@ -6,5 +7,6 @@ class Salida(models.Model):
     fecha_inicio = models.DateField()
     fecha_termino = models.DateField()
     hora = models.DateTimeField()
+    personas = models.ManyToManyField('persona.Persona')
 
 

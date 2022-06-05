@@ -8,3 +8,4 @@ class Persona(models.Model):
     first_name = models.CharField(max_length=30)
     second_name = models.CharField(max_length=30)
     birth_date = models.DateField()
+    salidas = models.ManyToManyField('salida.Salida')
