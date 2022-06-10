@@ -7,6 +7,7 @@ class Salida(models.Model):
     fecha_inicio = models.DateField()
     fecha_termino = models.DateField()
     hora = models.DateTimeField()
-    personas = models.ManyToManyField('persona.Persona')
 
 
+def __str__(self):
+    return f'Nombre de salida: {self.nombre_salida}'
