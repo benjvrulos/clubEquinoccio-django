@@ -5,5 +5,5 @@ from salida.models import Salida
 # Create your views here.
 
 class SalidaCreateView(CreateView):
-    
     model = Salida
+    fields = '__all__'
