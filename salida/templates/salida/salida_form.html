@@ -56,8 +56,10 @@
             <div class="card-header">
                <h3 class="font-weight-bold text-center pt-4">Registro nueva salida </h3>
             </div>
-            <form action="#" method="post" class="borde p-4"  >
-               <div class="form-group">
+            <form action="#" method="post" class="borde p-4">
+               {% csrf_token %}
+               {{form.as_p}}
+               <!-- <div class="form-group">
                   <div class="row">
                      <div class="col">
                         <label for="inputFechaInicio">Fecha de Inicio</label>
@@ -98,7 +100,7 @@
                </div>
                <div class="form-group">
                   <label for="actividad">Imagen Salida</label>
-               </div>
+               </div> -->
                <div class="form-group mt-n3">
                   <label class="control-label custom-file-upload" for="archivo"><i class="fa fa-file-image-o"></i> Explorar Archivos</label>
                   <input type="file" class="form-control-file" id="archivo">
