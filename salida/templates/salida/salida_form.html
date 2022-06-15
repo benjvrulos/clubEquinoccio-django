@@ -56,26 +56,26 @@
             <div class="card-header">
                <h3 class="font-weight-bold text-center pt-4">Registro nueva salida </h3>
             </div>
-            <form action="#" method="post" class="borde p-4">
+            <form action="" method="post" class="borde p-4">
+               {{ form }}
                {% csrf_token %}
-               {{form.as_p}}
-               <!-- <div class="form-group">
+                <!-- <div class="form-group">
                   <div class="row">
                      <div class="col">
                         <label for="inputFechaInicio">Fecha de Inicio</label>
-                        <input type="date" class="form-control" id="fechaInicio">
+                        <input type="date" class="form-control" id="fechaInicio" value="{{salida.fecha_inicio}}">
                      </div>
                      <div class="col">
                         <label for="inputFechaTermino">Fecha de Término</label>
-                        <input type="date" class="form-control" id="fechaTermino">
+                        <input type="date" class="form-control" id="fechaTermino" value="{{salida.fecha_termino}}">
                      </div>
                   </div>
                </div>
                <div class="form-group">
                   <label for="Nombre">Nombre</label>
-                  <input type="text" class="form-control">
-               </div>
-               <div class="form-group">
+                  <input type="text" class="form-control" value="{{salida.nombre_salida}}">
+               </div> -->
+               <!-- <div class="form-group">
                   <label for="Descripción">Descripción</label>
                   <textarea class="form-control" id="Descripción" rows="3"></textarea>
                </div>
@@ -101,10 +101,10 @@
                <div class="form-group">
                   <label for="actividad">Imagen Salida</label>
                </div> -->
-               <div class="form-group mt-n3">
+               <!-- <div class="form-group mt-n3">
                   <label class="control-label custom-file-upload" for="archivo"><i class="fa fa-file-image-o"></i> Explorar Archivos</label>
                   <input type="file" class="form-control-file" id="archivo">
-               </div>
+               </div> -->
                <div class="container mt-5 mb-xl-5 text-center">
                   <button class="btn btn-primary" type="submit">Registrar Salida</button>
                </div>
