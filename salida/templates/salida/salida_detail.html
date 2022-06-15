@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>Detalle Salida - Club Equinoccio</title>
-  <link rel="shortcut icon" href="assets/img/icono.png" type="img/x-icon">
-  <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+  {% load static %}
+  <link rel="shortcut icon" href="{% static 'img/icono.png' %}" type="img/x-icon">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -20,7 +21,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
         <div id="logo">
           <a class="" href="index.html">
-            <img src="assets/img/icono_preview_rev_1.png" width="85" height="85" class="normal">
+            <img src="{% static 'img/icono_preview_rev_1.png' %}" width="85" height="85" class="normal">
           </a>
         </div>
 
@@ -61,32 +62,32 @@
   </header>
 
   <section id="hero2">
-    <img src="assets/img/Salidas/salida-01.jpg" alt="fondo">
+    <img src="{% static 'img/Salidas/salida-01.jpg' %}" alt="fondo">
     <div class="hero2-container">
-       <h1>Nombre Salida</h1>
+       <h1>{{my_salida.nombre_salida}}</h1>
     </div>
  </section>
 
   <main class="container">
    <div class="row resumen-salida">
-       <div class="col-sm-6">
+       <!-- <div class="col-sm-6">
            <h4>Lugar a visitar</h4>
-       </div>
+       </div> -->
        <div class="col-sm-6 iconos-salida">
           <div class="row">
           
            <div class="col-sm-4">
-               <img src="assets/img/icons/calendario.png" width="75" height="75" alt="icono calendario" style="margin: 0px">
-          <p>Fecha Inicio / Termino</p>
+               <img src="{% static 'img/icons/calendario.png' %}" width="75" height="75" alt="icono calendario" style="margin: 0px">
+          <p>{{my_salida.fecha_inicio}}/{{my_salida.fecha_termino}}</p>
            </div>
-           <div class="col-sm-4">
-               <img src="assets/img/icons/ruta.png" width="75" height="75" alt="icono ruta" style="margin: 0px">
-          <p>Ruta</p>
+           <!-- <div class="col-sm-4">
+               <img src="{% static 'img/icons/ruta.png' %}" width="75" height="75" alt="icono ruta" style="margin: 0px">
+          <p>Ruta</p> -->
            </div>
-           <div class="col-sm-4">
-               <img src="assets/img/icons/actividad.png" width="75" height="75" alt="icono actividad" style="margin: 0px">
+           <!-- <div class="col-sm-4">
+               <img src="{% static 'img/icons/actividad.png' %}" width="75" height="75" alt="icono actividad" style="margin: 0px">
           <p>Actividad</p>
-           </div>
+           </div> -->
           </div> 
        </div>
    </div>
@@ -129,10 +130,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 
 
 </body>
