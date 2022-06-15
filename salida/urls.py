@@ -4,7 +4,7 @@ from salida.views import (  SalidaCreateView, SalidaListView ,
 
 app_name = 'salida'
 urlpatterns = [
-    path('create', SalidaCreateView.as_view(), name='salida_form'),
-    path('', SalidaListView.as_view(), name='salida_list'),
-    path('detail/<int:pk>',SalidaDetailView.as_view(),name='salida_detail') ,
+    path('create', SalidaCreateView.as_view(), name='salida-form'),
+    path('', SalidaListView.as_view(), name='salida-list'),
+    path('detail/<int:pk>',SalidaDetailView.as_view(), name='salida-detail') ,
 ]

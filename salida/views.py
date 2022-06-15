@@ -20,3 +20,4 @@ class SalidaDetailView(DetailView):
 
     # model_detial.html --> salida_detail.html
     model = Salida
+    context_object_name = 'my_salida'
