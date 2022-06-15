@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView
 from django.urls import reverse_lazy
 from salida.models import Salida
 
@@ -21,3 +21,9 @@ class SalidaDetailView(DetailView):
     # model_detial.html --> salida_detail.html
     model = Salida
     context_object_name = 'my_salida'
+
+class SalidaUpdateView(UpdateView):
+    # model_form.html like CreteView
+    model = Salida
+    fields = '__all__'
+    success_url = reverse_lazy('salida:salida-list')
