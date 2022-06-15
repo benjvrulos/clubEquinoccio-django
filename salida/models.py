@@ -1,3 +1,5 @@
+from ast import arg
+from audioop import reverse
 from distutils.command.upload import upload
 from email.policy import default
 from django.db import models
@@ -11,6 +13,9 @@ class Salida(models.Model):
     foto_salida = models.ImageField(upload_to='salida',blank=True)
     # hora = models.DateTimeField()
 
-
-def __str__(self):
-    return f'Nombre de salida: {self.nombre_salida}'
+    def get_absolute_url(self):
+        return reverse('salida-detail',args= [str(self.id)])
+        
+    
+    def __str__(self):
+        return f'Nombre de salida: {self.nombre_salida}'
