@@ -5,4 +5,4 @@ from salida.models import Salida
 class SalidaForm(ModelForm):
     class Meta:
         model = Salida
-        fields = ['nombre_salida','fecha_inicio','fecha_termino']
+        fields = ['nombre_salida','fecha_inicio','fecha_termino','foto_salida']

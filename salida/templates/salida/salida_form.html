@@ -56,10 +56,10 @@
             <div class="card-header">
                <h3 class="font-weight-bold text-center pt-4">Registro nueva salida </h3>
             </div>
-            <form action="" method="post" class="borde p-4">
-               <!-- {{ form }} -->
+            <form action="" method="post" class="borde p-4" enctype="multipart/form-data">
+               {{ form.as_p }}
                {% csrf_token %}
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <div class="row">
                      <div class="col">
                         <label for="fecha_inicio">Fecha de Inicio</label>
@@ -74,7 +74,7 @@
                <div class="form-group">
                   <label for="nombre_salida">Nombre</label>
                   <input type="text" class="form-control" name="nombre_salida" id="nombre_salida">
-               </div>
+               </div> -->
                <!-- <div class="form-group">
                   <label for="Descripción">Descripción</label>
                   <textarea class="form-control" id="Descripción" rows="3"></textarea>
@@ -101,9 +101,9 @@
                <div class="form-group">
                   <label for="actividad">Imagen Salida</label>
                </div> -->
-               <!-- <div class="form-group mt-n3">
-                  <label class="control-label custom-file-upload" for="archivo"><i class="fa fa-file-image-o"></i> Explorar Archivos</label>
-                  <input type="file" class="form-control-file" id="archivo">
+               <!-- <div class="form-group">
+                  <label for="foto">Foto :</label>
+                  <input type="file" class="form-control-file" name="foto" id="foto">
                </div> -->
                <div class="container mt-5 mb-xl-5 text-center">
                   <button class="btn btn-primary" type="submit">Registrar Salida</button>
