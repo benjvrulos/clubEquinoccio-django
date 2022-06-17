@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'salida.apps.SalidaConfig',
     'persona.apps.PersonaConfig',
+    'user.apps.UserConfig',
 ]
 
 MIDDLEWARE = [
