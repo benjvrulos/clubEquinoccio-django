@@ -123,7 +123,7 @@
                                        
                                        {% for salida in salida_list  %} 
                                        <tr>
-                                          <td scope="row"> <img src="{% static 'img/pexels-simon-migaj-747964.jpg' %}" alt="" width="75" height="75"></td>
+                                          <td scope="row"> <img src="{{ salida.foto_salida.url }}" alt="" width="75" height="75"></td>
                                           <td class="text-center"><a href="{% url 'salida:salida-detail' salida.id %}">{{ salida.nombre_salida }}</a></td>
                                           <!-- <td class="text-center">Lugar a visitar</td>
                                           <td class="text-center">Tipo de actividad</td> -->

@@ -10,7 +10,7 @@ class Salida(models.Model):
     nombre_salida = models.CharField(max_length=50)
     fecha_inicio = models.DateField()
     fecha_termino = models.DateField()
-    foto_salida = models.ImageField(upload_to='salida',blank=True)
+    foto_salida = models.ImageField(blank=True,upload_to='images')
     # hora = models.DateTimeField()
 
     def get_absolute_url(self):
