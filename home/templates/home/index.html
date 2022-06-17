@@ -97,12 +97,15 @@
          <div class="testimonials">
             
                <div class="owl-carousel testimonials-carousel">
+
+                  
+                  {% for salida in salidas %}
                   <div class="testimonial-item">
-                     <img src="{% static 'home/img/portfolio/portfolio-3.jpg' %}" alt="" class="testimonial-img rounded img-fluid">
+                     <img src="{{ salida.foto_salida.url }}" alt="" class="testimonial-img rounded img-fluid">
                      <div class="testimonial-conten">
                              <div class="info">
                                  <div class="col-md-12">
-                                    <h3>Nombre salida</h3>
+                                    <h3>{{ salida.nomnbre_salida }}</h3>
                                  </div>
                               </div>
                               <div class="category">
@@ -115,11 +118,11 @@
                                     <h4>Lugar</h4>
                                  </div>
                                  <div class="col-md-4">
-                                    <h3>05/03</h3>
+                                    <h3>{{ salida.fecha_inicio }}</h3>
                                     <h4>Fecha inicio</h4>
                                  </div>
                                  <div class="col-md-4">
-                                    <h3>15/03</h3>
+                                    <h3>{{ salida.fecha_termino }}</h3>
                                     <h4>Fecha termino</h4>
                                  </div>
                               </div>
@@ -132,160 +135,7 @@
                         <a href="single-salida.html" class="link"></a>                   
                      </div>
                   </div>
-                  <div class="testimonial-item">
-                    <div class="testimonil-img">
-                      <img src="{% static 'home/img/inicio-bg.jpg' %}" alt=""' %} class="rounded">
-                     </div>
-                     <div class="testimonial-conten">
-    
-                         
-                             
-                             <div class="info">
-                                 <div class="col-md-12">
-                                    <h3>Nombre salida</h3>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin embargo, el maestro de obras, no sé cómo, para elegir los modos</p>
-                              </div>
-                             
-                              <div class="row meta">
-                                 <div class="col-md-4">
-                                    <h3>Nombre</h3>
-                                    <h4>Lugar</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>05/03</h3>
-                                    <h4>Fecha inicio</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>15/03</h3>
-                                    <h4>Fecha termino</h4>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                <h3>Escalada</h3>
-                                    <h4>Tipo de Actividad</h4>
-                              </div>
-                              
-                          
-                        <a href="single-salida.html" class="link"></a>                   
-                     </div>
-                  </div>
-                  <div class="testimonial-item">
-                     <img src="{% static 'home/img/portfolio/portfolio-3.jpg' %}" alt="" class="testimonial-img rounded">
-                     <div class="testimonial-conten">
-    
-                         
-                             
-                             <div class="info">
-                                 <div class="col-md-12">
-                                    <h3>Nombre salida</h3>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin embargo, el maestro de obras, no sé cómo, para elegir los modos</p>
-                              </div>
-                             
-                              <div class="row meta">
-                                 <div class="col-md-4">
-                                    <h3>Nombre</h3>
-                                    <h4>Lugar</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>05/03</h3>
-                                    <h4>Fecha inicio</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>15/03</h3>
-                                    <h4>Fecha termino</h4>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                <h3>Escalada</h3>
-                                    <h4>Tipo de Actividad</h4>
-                              </div>
-                              
-                          
-                        <a href="single-salida.html" class="link"></a>                   
-                     </div>
-                  </div>
-                  <div class="testimonial-item">
-                     <img src="{% static 'home/img/portfolio/portfolio-3.jpg' %}" alt="" class="testimonial-img rounded">
-                     <div class="testimonial-conten">
-    
-                         
-                             
-                             <div class="info">
-                                 <div class="col-md-12">
-                                    <h3>Nombre salida</h3>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin embargo, el maestro de obras, no sé cómo, para elegir los modos</p>
-                              </div>
-                             
-                              <div class="row meta">
-                                 <div class="col-md-4">
-                                    <h3>Nombre</h3>
-                                    <h4>Lugar</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>05/03</h3>
-                                    <h4>Fecha inicio</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>15/03</h3>
-                                    <h4>Fecha termino</h4>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                <h3>Escalada</h3>
-                                    <h4>Tipo de Actividad</h4>
-                              </div>
-                              
-                          
-                        <a href="single-salida.html" class="link"></a>                   
-                     </div>
-                  </div>
-                  <div class="testimonial-item">
-                     <img src="{% static 'home/img/portfolio/portfolio-3.jpg' %}" alt="" class="testimonial-img rounded">
-                     <div class="testimonial-conten">
-    
-                         
-                             
-                             <div class="info">
-                                 <div class="col-md-12">
-                                    <h3>Nombre salida</h3>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sin embargo, el maestro de obras, no sé cómo, para elegir los modos</p>
-                              </div>
-                             
-                              <div class="row meta">
-                                 <div class="col-md-4">
-                                    <h3>Nombre</h3>
-                                    <h4>Lugar</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>05/03</h3>
-                                    <h4>Fecha inicio</h4>
-                                 </div>
-                                 <div class="col-md-4">
-                                    <h3>15/03</h3>
-                                    <h4>Fecha termino</h4>
-                                 </div>
-                              </div>
-                              <div class="category">
-                                <h3>Escalada</h3>
-                                    <h4>Tipo de Actividad</h4>
-                              </div>
-                              
-                          
-                        <a href="single-salida.html" class="link"></a>                   
-                     </div>
-                  </div>
+                  {% endfor %}
                </div>
             </div>
          </div>
