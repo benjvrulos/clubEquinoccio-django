@@ -7,7 +7,6 @@ from django.contrib import messages
 
 def register(request):
     if request.method == "POST":
-        messages.success(request,"METHOD_POST")
         form = NewUserForm(request.POST)
         if form.is_valid():
             user = form.save()
