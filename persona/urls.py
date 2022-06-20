@@ -1,8 +1,9 @@
-from persona.views import PersonaCreateView
+from unicodedata import name
+from persona.views import PersonaCreate
 from django.urls import path
 
 
 app_name = 'persona'
 urlpatterns = [
-    path('', PersonaCreateView.as_view())
+    path('register-salida/<int:parameter>', PersonaCreate, name='persona-create'),
 ]
