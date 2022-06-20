@@ -1,7 +1,6 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 from persona.forms import PersonaForm
-from persona.models import Persona
 from salida.models import Salida
 from django.shortcuts import render, redirect
 
@@ -17,10 +16,9 @@ def PersonaCreate(request, parameter):
             salida.lista_personas.add(persona)
             return redirect('home:home')
     
-    else:
-        form = PersonaForm()
-        context = {
-            'form':form
+    form = PersonaForm()
+    context = {
+        'form':form
         }
 
     return render(request, 'persona/persona_form.html', context)
