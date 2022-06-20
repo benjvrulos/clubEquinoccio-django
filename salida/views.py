@@ -35,11 +35,3 @@ class SalidaDeleteView(DeleteView):
     model = Salida
     success_url = reverse_lazy('salida:salida-list')
 
-
-class SalidaPersonaListView(ListView):
-    template_name = 'salida/salida_list-personas.html'
-    model = Salida
-    context_object_name = 'list_personas'
-    def get_queryset(self):
-        qs = super().get_queryset()
-        return qs.filter(lista_personas =self.kwargs['id_salida'])

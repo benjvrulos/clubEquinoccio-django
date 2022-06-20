@@ -1,6 +1,7 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView
 from persona.forms import PersonaForm
+from persona.models import Persona
 from salida.models import Salida
 from django.shortcuts import render, redirect
 
@@ -24,11 +25,13 @@ def PersonaCreate(request, parameter):
     return render(request, 'persona/persona_form.html', context)
 
 
-# class PersonaListView(ListView):
-#     template_name = 'persona/persona_list.html'
-#     def get_queryset(self):
-#         qs = super().get_queryset()
-#         return qs.filter(id=self.kwargs['id_salida'])
+class PersonaListView(ListView):
+    model = Persona
+    template_name = 'persona/salida_persona-list.html'
+    context_object_name = 'list_personas'
+    def get_queryset(self):
+        qs = super().get_queryset()
+        return qs.filter(salida__id = self.kwargs['id_salida'])
 
 
 
