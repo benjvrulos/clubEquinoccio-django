@@ -24,6 +24,16 @@ def PersonaCreate(request, parameter):
     return render(request, 'persona/persona_form.html', context)
 
 
+# class PersonaListView(ListView):
+#     template_name = 'persona/persona_list.html'
+#     def get_queryset(self):
+#         qs = super().get_queryset()
+#         return qs.filter(id=self.kwargs['id_salida'])
+
+
+
+
+
 
 
 
