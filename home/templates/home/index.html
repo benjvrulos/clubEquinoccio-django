@@ -58,7 +58,7 @@
                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                          <div class="media align-items-center">
                           
-                             <img class="avatar avatar-sm rounded-circle" alt="Imagen Usuario" src="{% static 'img/perfil/usuario-1.jpg' %}">
+                             <img class="avatar avatar-sm rounded-circle" alt="Imagen Usuario" src="{{user.profile.image.url}}">
                           
                            <div class="media-body  ml-2  d-none d-lg-block">
                              <span class="mb-0 text-sm">{{ user.username }}</span>
