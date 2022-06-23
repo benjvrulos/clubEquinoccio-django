@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      {% load static %}
+      <title>Equinoccio - Club deportivo</title>
+      <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+      <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+      <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+      <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="shortcut icon" href="{% static 'img/icono.png' %}" type="img/x-icon">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+   <body>
+      <header id="header" class="fixed-top header-transparent">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
+               <div id="logo">
+                  <a class="" href="index.html">
+                  <img src="{% static 'img/icono_preview_rev_1.png' %}" width="85" height="85" class="normal" >
+                  </a>
+               </div>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                  <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link scrollto" href="index.html#header">Inicio</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link scrollto" href="index.html#about">Nosotros</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link scrollto" href="index.html#salida">Salidas</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link scrollto" href="index.html#portfolio">Galeria</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link scrollto" href="index.html#contacto">Contacto</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Únete</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="d-flex justify-content-end align-items-center">
+                  <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+                     <li class="nav-item dropdown">
+                        <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <div class="media align-items-center">
+                              <img class="avatar avatar-sm rounded-circle" alt="Imagen Usuario" src="{{user.profile.image.url}}">
+                              <div class="media-body  ml-2  d-none d-lg-block">
+                                 <span class="mb-0 text-sm">John Snow</span>
+                              </div>
+                           </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                           <a href="#!" class="dropdown-item">
+                           <i class="fa fa-user"></i>
+                           <span>Mi perfil</span>
+                           </a>
+                           <div class="dropdown-divider"></div>
+                           <a href="#!" class="dropdown-item">
+                           <i class="fa fa-sign-out"></i>
+                           <span>Cerrar sesión</span>
+                           </a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <main id="main">
+         <section id="perfil">
+            <div class="container perfil">
+               <h2>Perfil </h2>
+               <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</p>
+               <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="panel_perfil.html">Perfil</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="panel_perfil_salidas.html">Salidas</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="panel_perfil_usuarios.html">Usuarios</a>
+  </li>
+</ul>
+               <!-- Tab panes -->
+               <div class="content">
+                        <div class="card card-custom card-stretch">
+                           <div class="card-header py-3">
+                              <div class="card-title align-items-start flex-column">
+                                 <h3 class="card-label font-weight-bolder text-dark">Informacion personal</h3>
+                                 <span class="text-muted font-weight-bold font-size-sm mt-1">Actualice su información personal</span>
+                              </div>
+                           </div>
+                        
+                             
+                              <div class="card-body">
+                                 <div class="row">
+                                    <label class="col-xl-3"></label>
+                                    <div class="col-lg-9 col-xl-6">
+                                       <h5 class="font-weight-bold mb-6">Información del usuario</h5>
+                                    </div>
+                                    <div class="card-toolbar">
+                              <button type="reset" class="btn btn-info mr-2 btn-sm"> Editar perfil <i class="fa fa-pencil-square-o"></i></button>
+                           </div>
+                                 </div>
+                                 <div class="form-group row">
+                                    <div class="col-xl-3 col-lg-3 col-form-label">
+                                        <h4>Avatar</h4>
+                                    </div>
+                                    <div class="col-lg-9 col-xl-6 col-form-label">
+                                       <div class="picture-container">
+                                          <div class="picture">
+                                             <img src="{% static 'img/perfil/usuario-1.jpg" class="picture-src">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="form-group row">
+                                    <div class="col-xl-3 col-lg-3 col-form-label">
+                                        <h4>Nombre</h4>
+                                    </div>
+                                    <div class="col-lg-9 col-xl-6 col-form-label">
+                                        <h5>John</h5>
+                                    </div>
+                                 </div>
+                                 <div class="form-group row">
+                                    <div class="col-xl-3 col-lg-3 col-form-label">
+                                        <h4>Apellido</h4>
+                                    </div>
+                                    <div class="col-lg-9 col-xl-6 col-form-label">
+                                        <h5>Snow</h5>
+                                    </div>
+                                 </div>
+                                 <div class="form-group row">
+                                    <div class="col-xl-3 col-lg-3 col-form-label">
+                                        <h4>Nombre usuario</h4>
+                                    </div>
+                                    <div class="col-lg-9 col-xl-6 col-form-label">
+                                        <h5>JohnStark</h5>
+                                    </div>
+                                 </div>
+                                 <div class="form-group row">
+                                    <div class="col-xl-3 col-lg-3 col-form-label">
+                                        <h4>Correo</h4>
+                                    </div>
+                                    <div class="col-lg-9 col-xl-6 col-form-label">
+                                        <h5>john.stark@gmail.com</h5>
+                                    </div>
+                                 </div>
+                              </div>
+                           <!--end::Form-->
+                           
+                        </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Contact Section -->
+      </main>
+      <footer id="footer">
+         <div class="container">
+            <div class="social-links">
+               <a href="https://www.facebook.com/Club-Deportivo-Equinoccio-1915192972122214" class="twitter"><i class="fa fa-facebook"></i></a>
+               <a href="#" class="facebook"><i class="fa fa-twitter"></i></a>
+               <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+               © <strong><span>Equinoccio - Club deportivo</span></strong>. Todos los derechos reservados.
+            </div>
+         </div>
+      </footer>
+      <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+      <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'vendor/counterup/counterup.min.js' %}"></script>
+      <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>
