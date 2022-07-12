@@ -12,6 +12,8 @@ class Salida(models.Model):
     fecha_termino = models.DateField()
     foto_salida = models.ImageField(blank=True,upload_to='images')
     lista_personas = models.ManyToManyField(Persona)
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
     # hora = models.DateTimeField()
 
     def get_absolute_url(self):
